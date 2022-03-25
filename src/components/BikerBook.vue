@@ -148,13 +148,17 @@
       // reverse the traject
       function inverse() {
         info.value.reverse();
+        //we have to change waypoints order
+        for (const item of info.value) {
+          console.log(item);
+          var arrPoints = item.point.split("/").reverse();
+          var newStr = arrPoints.join(" / ");
+          item.point = newStr;
+        }
+        //clean and recreate
         etapes.value = [];
         addCustomFields();
         //reset all checkboxes (not in the array)
-        var checkboxes = document.getElementsByName("accept");
-        for (var cb = 0, n = checkboxes.length; cb < n; cb++) {
-          checkboxes[cb].checked = false;
-        }
         resetCheckboxes();
       }
 
