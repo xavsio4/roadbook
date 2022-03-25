@@ -1,26 +1,27 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container mx-auto">
+    <biker-book></biker-book>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  //import HelloWorld from "./components/HelloWorld.vue";
+  // import Tabs from "./components/Tabs.vue";
+  import BikerBook from "./components/BikerBook.vue";
+  //import GpxParse from "./components/GpxParse.vue";
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  export default {
+    name: "App",
+    components: {
+      //  Tabs,
+      BikerBook,
+      //GpxParse,
+    },
+  };
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+    margin-top: 60px;
+  }
 </style>

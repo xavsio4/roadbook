@@ -1,4 +1,10 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
+import "./assets/index.css";
+import VueHtmlToPaper from "./plugins/VueHtmlToPaper";
 
-createApp(App).mount('#app')
+let app = createApp(App);
+
+app.use(VueHtmlToPaper);
+
+app.mount("#app");
